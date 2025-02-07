@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div id="startScreen">
+      <h1>Snake Game</h1>
+      <button onclick="startGame('single')">Um Jogador</button>
+      <button onclick="startGame('versus')">Versus Computador</button>
+    </div>
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+    <div id="gameOver" class="hidden">
+      <h2>Game Over!</h2>
+      <p>Pontuação: <span id="finalScore">0</span></p>
+      <input type="text" id="playerName" placeholder="Seu nome" />
+      <button onclick="submitScore()">Salvar</button>
+      <button onclick="restartGame()">Jogar Novamente</button>
+    </div>
+    <div id="ranking">
+      <h3>Melhores Pontuações</h3>
+      <ol id="highScores"></ol>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
